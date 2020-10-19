@@ -1,15 +1,13 @@
 .criminalContent {
-    display: flex;
-    border: 1px black solid;
-    flex-direction: column;
-    margin: 10px;
-    padding: 10px;
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 0.5rem;
+    flex-basis: 25%;
     
 }
 .criminalsContainer {
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
-    padding: 20px;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
