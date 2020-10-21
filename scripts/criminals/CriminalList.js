@@ -50,7 +50,7 @@ const render = (criminalsArray) => {
         criminalHTMLRep += Criminal(criminal)
 
     targetElement.innerHTML = `
-        <h3>Glassdale Criminals</h3>
+       
         <section class="criminalsList">
         ${criminalHTMLRep}
         </section>
