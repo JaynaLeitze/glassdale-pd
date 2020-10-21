@@ -1,4 +1,4 @@
-import { getOfficers, useOFficers } from "./OfficerProvider.js"
+import { getOfficers, useOfficers } from "./OfficerProvider.js"
 import { Officer } from "./Officers.js"
 
 
@@ -8,7 +8,7 @@ export const OfficerList = () => {
     getOfficers()
     .then( () => {
         let officerHTMLRep = ""
-        let officerArray = useOFficers()
+        let officerArray = useOfficers()
 
         for(const officer of officerArray){
             officerHTMLRep += Officer(officer)}
