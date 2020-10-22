@@ -16,7 +16,7 @@ export const OfficerList = () => {
     
     
 
-    const targetElement = document.querySelector(".officersContainer")
+    const targetElement = document.querySelector(".filters__officer")
     targetElement.innerHTML += `
             <section class="officers">
             <h3> Officers </h3>
