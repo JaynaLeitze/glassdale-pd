@@ -6,7 +6,7 @@ import { NoteHTML } from "./NotesHTML.js"
 // render html string of notes to the notesContainer element on the DOM
 
 const eventHub = document.querySelector(".container")
-const notesContainer = document.querySelector(".notesContainer")
+const notesContainer = document.querySelector(".noteFormContainer")
 
 
 eventHub.addEventListener("noteStateChanged",() => NoteList())
@@ -18,7 +18,7 @@ export const NoteList = () => {
         const allNotes = useNotes()
         render(allNotes)
     })
-}
+
 
 const render = (notesArray) => {
     let notesHTMLRep = ""
@@ -29,4 +29,4 @@ const render = (notesArray) => {
 notesContainer.innerHTML += `
     ${notesHTMLRep}
 `
-}
+}}

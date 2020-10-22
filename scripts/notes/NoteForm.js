@@ -9,8 +9,9 @@ const eventHub = document.querySelector(".container")
 
 const render = () => {
     contentTarget.innerHTML = `
-    <input type="text" id="note-investigator"/>
-    <input type="text" id="note-suspect"/>
+    <h3>Note Form</h3>
+    <input type="text" id="note-investigator" placeholder="Investigator:"/>
+    <input type="text" id="note-suspect" placeholder="Suspect:"/>
     <input type="date" id="note-date"/>
     <textarea id="note-text"></textarea>
     <button id="saveNote">Save Note</button>
@@ -18,6 +19,7 @@ const render = () => {
 }
 
 eventHub.addEventListener("click",clickEvent => {
+    if (clickEvent.target.id === "saveNote"){
     //grab input values
     const dateOfInterview = document.querySelector("#note-date").value
     const investigator = document.querySelector("#note-investigator").value
@@ -37,6 +39,7 @@ eventHub.addEventListener("click",clickEvent => {
 
     // Post object to database/API/json
     saveNote(newNote)
+    }
 })
 
 export const NoteForm = () => {
