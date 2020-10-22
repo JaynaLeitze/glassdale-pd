@@ -1,6 +1,6 @@
 let officers = []
 
-export const useOFficers =() => {
+export const useOfficers =() => {
     return officers.slice()
 }
 

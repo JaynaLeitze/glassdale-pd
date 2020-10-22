@@ -5,12 +5,14 @@
     flex-basis: 25%;
     
 }
-.criminalsContainer {
+.criminalsContainer, .criminalsList {
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: space-evenly;
 }
+
+
 
 hr {
     padding:5px;
