@@ -15,7 +15,7 @@ export const getOfficers = () => {
         // store data in a variable
         parsedOfficers => {
             //create table for data
-        console.table(parsedOfficers)
+        
         //emptry array = data stored in variable?
         officers = parsedOfficers
         }
