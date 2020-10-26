@@ -8,6 +8,7 @@ import { NoteList } from "./notes/NotesList.js"
 import { NoteForm } from "./notes/NoteForm.js"
 import { OfficerSelect } from "./officers/OfficerSelect.js"
 import { alibiEventListener } from "./criminals/AlibiList.js"
+import { getStatements } from "./Witness/WitnessData.js"
 
 
 //getOfficers()
@@ -24,3 +25,4 @@ NoteList()
 NoteForm()
 OfficerSelect()
 alibiEventListener()
+
