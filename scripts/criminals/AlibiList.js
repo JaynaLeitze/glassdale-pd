@@ -5,20 +5,22 @@ import { useCriminals } from "./CriminalProvider.js"
 
 const eventHub = document.querySelector('.container')
 
-export const alibiEventListener = () => {
 
 eventHub.addEventListener("alibiButtonClicked", (eventObj) => {
     //show teh alibis for teh selected criminals
-    console.log(eventObj.detail.criminalId)
+    const arrayofCriminals = useCriminals()
+    console.log(arrayofCriminals)
     // need to find the one criminal whose id matches the criminalId sent in the event
-    const foundCriminal = useCriminals().find((criminalObj) => criminalObj.id === parseInt(eventObj.detail.criminalId))
-    
+    const foundCriminal = arrayofCriminals.find((criminalObj) => {
+        criminalObj.id === parseInt(eventObj.detail.criminalId)
+    })
 
     AlibiList(foundCriminal)
 })
-}
+
 //function that adds a list of alibis to the criminal card
-export const AlibiList = (criminalObj) => {
+const AlibiList = (criminalObj) => {
+   
     render(criminalObj)
 
 }

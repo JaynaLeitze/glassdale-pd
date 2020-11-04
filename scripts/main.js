@@ -7,14 +7,16 @@ import { OfficerList } from "./officers/OfficerList.js"
 import { NoteList } from "./notes/NotesList.js"
 import { NoteForm } from "./notes/NoteForm.js"
 import { OfficerSelect } from "./officers/OfficerSelect.js"
-import { alibiEventListener } from "./criminals/AlibiList.js"
+import { getStatements } from "./Witness/WitnessData.js"
+import "./Witness/WitnessList.js"
+import {renderWitnessButton} from "./Witness/Witness.js"
+import "./criminals/AlibiList.js"
 
 
 //getOfficers()
 //.then()
 
 const allTheCriminals = useCriminals()
-console.log(allTheCriminals)
 
 CriminalList()
 ConvictionSelect()
@@ -23,4 +25,5 @@ OfficerList()
 NoteList()
 NoteForm()
 OfficerSelect()
-alibiEventListener()
+
+renderWitnessButton()
