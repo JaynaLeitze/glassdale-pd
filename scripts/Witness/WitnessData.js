@@ -1,7 +1,7 @@
 let witnesses = []
 
-const useStatements = () => {
-    witnesses.slice()
+export const useStatements = () => {
+  return witnesses.slice()
 }
 
 export const getStatements = () => {

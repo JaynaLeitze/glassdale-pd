@@ -26,7 +26,7 @@ const render = (notesArray) => {
     notesHTMLRep += NoteHTML(note)
 
 
-notesContainer.innerHTML += `
+notesContainer.innerHTML = `
     ${notesHTMLRep}
 `
 }}

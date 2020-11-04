@@ -16,7 +16,7 @@ eventHub.addEventListener("click", (eventObj) => {
     //check to see if the button is the alibi button
     if (eventObj.target.id.startsWith("associates--")){
 
-    }
+    
     //split id of alibi button
     const [prefix, criminalId] = eventObj.target.id.split("--")
 
@@ -28,4 +28,5 @@ eventHub.addEventListener("click", (eventObj) => {
     })
     //dispatch event so that other modules can listen for this event
     eventHub.dispatchEvent(alibiEvent)
+}
 })
