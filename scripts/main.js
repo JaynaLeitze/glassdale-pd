@@ -11,6 +11,7 @@ import { getStatements } from "./Witness/WitnessData.js"
 import "./Witness/WitnessList.js"
 import {renderWitnessButton} from "./Witness/Witness.js"
 import "./criminals/AlibiList.js"
+import { getNotes } from "./notes/NotesDataProvider.js"
 
 
 //getOfficers()
@@ -22,8 +23,12 @@ CriminalList()
 ConvictionSelect()
 OfficerList()
 
-NoteList()
+
 NoteForm()
 OfficerSelect()
 
 renderWitnessButton()
+
+getNotes()
+.then(getCriminals)
+.then(NoteList)

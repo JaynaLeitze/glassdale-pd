@@ -1,3 +1,4 @@
+import { getCriminals, useCriminals } from "../criminals/CriminalProvider.js"
 import { getNotes, useNotes } from "./NotesDataProvider.js"
 import { NoteHTML } from "./NotesHTML.js"
 
@@ -6,27 +7,44 @@ import { NoteHTML } from "./NotesHTML.js"
 // render html string of notes to the notesContainer element on the DOM
 
 const eventHub = document.querySelector(".container")
-const notesContainer = document.querySelector(".noteFormContainer")
+const notesContainer = document.querySelector(".noteListContainer")
 
 
 eventHub.addEventListener("noteStateChanged",() => NoteList())
     
 
 export const NoteList = () => {
-    getNotes()
-    .then(() => {
-        const allNotes = useNotes()
-        render(allNotes)
-    })
+        const notes = useNotes()
+        const criminals = useCriminals()
+
+        const arrayOfNoteRepresentations = notes.map(note => {
+
+        const criminal = criminals.find(criminalObj => criminalObj.id === note.criminalId)
+
+        const html = NoteHTML(note, criminal)
+        return html
+
+        })
+        
+        const stringOfAll = arrayOfNoteRepresentations.join("")
+
+        notesContainer.innerHTML = stringOfAll
+    }
 
 
-const render = (notesArray) => {
-    let notesHTMLRep = ""
-    for (const note of notesArray)
-    notesHTMLRep += NoteHTML(note)
+// const render = (notesCollection, criminalCollection) => {
+// notesContainer.innerHTML = notesCollection.map(note => {
+//     // Find the related criminal
+//     const relatedCriminal = criminalCollection.find(criminal => criminal.id === note.criminalId)
 
+//     return `
+//         <section class="note">
+//             <h2>Note about ${relatedCriminal.name}</h2>
+//             ${note.noteText}
+//         </section>
+//     `
+// })
 
-notesContainer.innerHTML = `
-    ${notesHTMLRep}
-`
-}}
+   
+
+// }
