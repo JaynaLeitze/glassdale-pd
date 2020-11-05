@@ -1,4 +1,6 @@
+import { getCriminals, useCriminals } from "../criminals/CriminalProvider.js"
 import { saveNote } from "./NotesDataProvider.js"
+import { CriminalList } from "../criminals/CriminalList.js"
 
 // create note form HTML with inputs and render form to DOM
 // add a click event for when user clicks the submit button
@@ -7,11 +9,22 @@ import { saveNote } from "./NotesDataProvider.js"
 const contentTarget = document.querySelector(".noteFormContainer")
 const eventHub = document.querySelector(".container")
 
-const render = () => {
+
+
+const render = (criminals) => {
     contentTarget.innerHTML = `
     <h3>Note Form</h3>
     <input type="text" id="note-investigator" placeholder="Investigator:"/>
-    <input type="text" id="note-suspect" placeholder="Suspect:"/>
+    <select class="dropdown" id="note-Suspect">
+            <option value="0">Select a Criminal</option>
+            ${criminals.map(
+            criminalObj => {
+                return `<option value="${criminalObj.id}"> ${criminalObj.name}</option>`
+                }
+            ).join("")
+        }
+        </select>
+        
     <input type="date" id="note-date"/>
     <textarea id="note-text"></textarea>
     <button id="saveNote">Save Note</button>
@@ -23,7 +36,7 @@ eventHub.addEventListener("click",clickEvent => {
     //grab input values
     const dateOfInterview = document.querySelector("#note-date").value
     const investigator = document.querySelector("#note-investigator").value
-    const suspect = document.querySelector("#note-suspect").value
+    const criminalId = document.querySelector("#note-Suspect").value
     const note = document.querySelector("#note-text").value
     const timestamp = Date.now()
 
@@ -32,16 +45,21 @@ eventHub.addEventListener("click",clickEvent => {
     const newNote = {
         dateOfInterview,
         investigator,
-        suspect,
+        criminalId: parseInt(criminalId),
         note,
         timestamp
     }
-
+    console.log(newNote)
     // Post object to database/API/json
     saveNote(newNote)
     }
 })
 
 export const NoteForm = () => {
-    render()
+    getCriminals()
+    .then(() => {
+        const criminalArray = useCriminals()
+        render(criminalArray)
+    })
+    
 }

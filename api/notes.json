@@ -1,52 +1,68 @@
 {
   "notes": [
     {
-      "dateOfInterview": "1987-10-22",
+      "dateOfInterview": "2020-11-04",
       "investigator": "Sherlock",
-      "suspect": "Moriarty",
-      "note": "Shady AF",
-      "timestamp": 1603408499577,
+      "criminalId": 12,
+      "note": "Shady af",
+      "timestamp": 1604527429348,
       "id": 1
     },
     {
-      "dateOfInterview": "",
-      "investigator": "",
-      "suspect": "",
-      "note": "",
-      "timestamp": 1603815498307,
+      "dateOfInterview": "2020-11-04",
+      "investigator": "Sherlock",
+      "criminalId": 1,
+      "note": "Shady af",
+      "timestamp": 1604527567573,
       "id": 2
     },
     {
-      "dateOfInterview": "",
-      "investigator": "",
-      "suspect": "",
-      "note": "",
-      "timestamp": 1603815591187,
+      "dateOfInterview": "2020-11-04",
+      "investigator": "Sherlock",
+      "criminalId": 3,
+      "note": "Shady af",
+      "timestamp": 1604592628050,
       "id": 3
     },
     {
-      "dateOfInterview": "",
-      "investigator": "",
-      "suspect": "",
-      "note": "",
-      "timestamp": 1603815600098,
+      "dateOfInterview": "2020-11-04",
+      "investigator": "Sherlock",
+      "criminalId": 3,
+      "note": "Shady af",
+      "timestamp": 1604594418749,
       "id": 4
     },
     {
-      "dateOfInterview": "",
-      "investigator": "",
-      "suspect": "",
-      "note": "",
-      "timestamp": 1603815611982,
+      "dateOfInterview": "2020-11-05",
+      "investigator": "Sherlock",
+      "criminalId": 3,
+      "note": "test",
+      "timestamp": 1604594736490,
       "id": 5
     },
     {
-      "dateOfInterview": "",
-      "investigator": "",
-      "suspect": "",
-      "note": "",
-      "timestamp": 1603815639994,
+      "dateOfInterview": "2020-11-12",
+      "investigator": "Sherlock",
+      "criminalId": 6,
+      "note": "Shady af",
+      "timestamp": 1604599618339,
       "id": 6
+    },
+    {
+      "dateOfInterview": "2020-11-19",
+      "investigator": "Bryan",
+      "criminalId": 15,
+      "note": "Shady",
+      "timestamp": 1604600111911,
+      "id": 7
+    },
+    {
+      "dateOfInterview": "2020-11-10",
+      "investigator": "Sherlock",
+      "criminalId": 14,
+      "note": "Shady",
+      "timestamp": 1604600389375,
+      "id": 8
     }
   ]
 }
