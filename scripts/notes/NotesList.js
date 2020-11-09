@@ -1,5 +1,5 @@
 import { getCriminals, useCriminals } from "../criminals/CriminalProvider.js"
-import { getNotes, useNotes } from "./NotesDataProvider.js"
+import { getNotes, useNotes, deleteNote } from "./NotesDataProvider.js"
 import { NoteHTML } from "./NotesHTML.js"
 
 // get the notes from the api >> use the notes array
@@ -14,17 +14,13 @@ eventHub.addEventListener("noteStateChanged",() => NoteList())
     
 
 export const NoteList = () => {
-        const notes = useNotes()
-        const criminals = useCriminals()
-
-        const arrayOfNoteRepresentations = notes.map(note => {
-
-        const criminal = criminals.find(criminalObj => criminalObj.id === note.criminalId)
-
-        const html = NoteHTML(note, criminal)
+    const notes = useNotes()
+    const criminals = useCriminals()
+    const arrayOfNoteRepresentations = notes.map(note => {
+    const criminal = criminals.find(criminalObj => criminalObj.id === note.criminalId)
+    const html = NoteHTML(note, criminal)
         return html
-
-        })
+    })
         
         const stringOfAll = arrayOfNoteRepresentations.join("")
 
@@ -47,4 +43,23 @@ export const NoteList = () => {
 
    
 
-// }
+
+
+eventHub.addEventListener("click", clickEvent => {
+   
+    if (clickEvent.target.id.startsWith("deleteNote--")) {
+        const [prefix, id] = clickEvent.target.id.split("--")
+        console.log("button was clicked");
+
+        /*
+            Invoke the function that performs the delete operation.
+
+            Once the operation is complete you should THEN invoke
+            useNotes() and render the note list again.
+        */
+       deleteNote(id).then(
+           () => {
+              NoteList()
+           }
+       )}
+    })

@@ -1,54 +1,6 @@
 {
   "notes": [
     {
-      "dateOfInterview": "2020-11-04",
-      "investigator": "Sherlock",
-      "criminalId": 12,
-      "note": "Shady af",
-      "timestamp": 1604527429348,
-      "id": 1
-    },
-    {
-      "dateOfInterview": "2020-11-04",
-      "investigator": "Sherlock",
-      "criminalId": 1,
-      "note": "Shady af",
-      "timestamp": 1604527567573,
-      "id": 2
-    },
-    {
-      "dateOfInterview": "2020-11-04",
-      "investigator": "Sherlock",
-      "criminalId": 3,
-      "note": "Shady af",
-      "timestamp": 1604592628050,
-      "id": 3
-    },
-    {
-      "dateOfInterview": "2020-11-04",
-      "investigator": "Sherlock",
-      "criminalId": 3,
-      "note": "Shady af",
-      "timestamp": 1604594418749,
-      "id": 4
-    },
-    {
-      "dateOfInterview": "2020-11-05",
-      "investigator": "Sherlock",
-      "criminalId": 3,
-      "note": "test",
-      "timestamp": 1604594736490,
-      "id": 5
-    },
-    {
-      "dateOfInterview": "2020-11-12",
-      "investigator": "Sherlock",
-      "criminalId": 6,
-      "note": "Shady af",
-      "timestamp": 1604599618339,
-      "id": 6
-    },
-    {
       "dateOfInterview": "2020-11-19",
       "investigator": "Bryan",
       "criminalId": 15,
@@ -59,10 +11,10 @@
     {
       "dateOfInterview": "2020-11-10",
       "investigator": "Sherlock",
-      "criminalId": 14,
-      "note": "Shady",
-      "timestamp": 1604600389375,
-      "id": 8
+      "criminalId": 5,
+      "note": "Smells like an ashtray",
+      "timestamp": 1604950059984,
+      "id": 9
     }
   ]
 }
