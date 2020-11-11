@@ -12,23 +12,29 @@ import "./Witness/WitnessList.js"
 import {renderWitnessButton} from "./Witness/Witness.js"
 import "./criminals/AlibiList.js"
 import { getNotes } from "./notes/NotesDataProvider.js"
+import { FacilityList } from "./Facilities/FacilityList.js"
+import { renderFacilitiesButton } from "./Facilities/FacilitiesButton.js"
+import "./Facilities/FacilityList.js"
 
 
 //getOfficers()
 //.then()
 
 const allTheCriminals = useCriminals()
-
-CriminalList()
+getCriminals()
+.then(CriminalList)
+// CriminalList()
 ConvictionSelect()
-OfficerList()
+// OfficerList()
 
 
 NoteForm()
 OfficerSelect()
 
 renderWitnessButton()
+renderFacilitiesButton()
 
 getNotes()
 .then(getCriminals)
 .then(NoteList)
+// FacilityList()
