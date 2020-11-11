@@ -1,33 +1,50 @@
 .criminalContent {
-    border: 1px solid black;
-    margin: 1rem;
-    padding: 0.5rem;
-    flex-basis: 20%;
-    
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 0.5rem;
+  flex-basis: 20%;
+  background-color: aquamarine;
 }
-.caseDataContainer, .criminalsList {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-evenly;
-    flex: 3;
+.caseDataContainer,
+.criminalsList {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+  flex: 3;
 }
-
-
 
 hr {
-    padding:5px;
-    background-color: black;
+  padding: 5px;
+  background-color: black;
 }
 
 .investigation {
-    display: flex;
-   
+  display: flex;
 }
 
 .noteFormContainer {
-    display:flex;
-    flex-direction: column;
-    flex: 2;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
 }
 
+.facilityContent {
+  display: flex;
+  border: 1px solid black;
+  background-color: cadetblue;
+  margin: 1rem;
+  padding: 0.5rem;
+  flex-basis: 20%;
+  flex-direction: column;
+}
+
+.witnessContent {
+  display: flex;
+  border: 1px solid black;
+  background-color: lavender;
+  margin: 1rem;
+  padding: 0.5rem;
+  flex-basis: 20%;
+  flex-direction: column;
+}
