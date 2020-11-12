@@ -10,8 +10,9 @@ eventHub.addEventListener("alibiButtonClicked", (eventObj) => {
   const arrayofCriminals = useCriminals();
   console.log(arrayofCriminals);
   // need to find the one criminal whose id matches the criminalId sent in the event
+
   const foundCriminal = arrayofCriminals.find((criminalObj) => {
-    criminalObj.id === parseInt(eventObj.detail.criminalId);
+    return criminalObj.id === parseInt(eventObj.detail.criminalId);
   });
 
   AlibiList(foundCriminal);

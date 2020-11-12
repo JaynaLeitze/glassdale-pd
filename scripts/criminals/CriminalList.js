@@ -13,6 +13,10 @@ import { getCriminals, useCriminals } from "./CriminalProvider.js";
 const eventHub = document.querySelector(".container");
 const targetElement = document.querySelector(".caseDataContainer");
 
+eventHub.addEventListener("criminalsButtonClicked", () => {
+  CriminalList();
+});
+
 export const CriminalList = () => {
   getFacilities()
     .then(getCriminalFacilities)
