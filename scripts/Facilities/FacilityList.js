@@ -1,36 +1,30 @@
-import { getFacilities, useFacilities } from "./FacilityDataProvider.js"
-import { FacilityHTML } from "./FacilityHTML.js"
+import { getFacilities, useFacilities } from "./FacilityDataProvider.js";
+import { FacilityHTML } from "./FacilityHTML.js";
 
-const eventHub = document.querySelector(".container")
-const facilitiesContainer = document.querySelector(".facility__container")
+const eventHub = document.querySelector(".container");
+const facilitiesContainer = document.querySelector(".caseDataContainer");
 
 eventHub.addEventListener("facilitiesButtonClicked", () => {
-
-FacilityList()
-})
-
-
+  FacilityList();
+});
 
 export const FacilityList = () => {
-    getFacilities()
-    .then(() => {
-      const facilitiesArray = useFacilities()
-      renderFacilities(facilitiesArray)
-    })
-    
-}
+  getFacilities().then(() => {
+    const facilitiesArray = useFacilities();
+    renderFacilities(facilitiesArray);
+  });
+};
 
 const renderFacilities = (facilities) => {
-    let facilityHTMLRep = ""
-    for (const facility of facilities) {
-        facilityHTMLRep += FacilityHTML(facility)
+  let facilityHTMLRep = "";
+  for (const facility of facilities) {
+    facilityHTMLRep += FacilityHTML(facility);
 
     facilitiesContainer.innerHTML = `
-       <h2> Facilities </h2>
-        <section class="facilityList">
+       
+        
         ${facilityHTMLRep}
-        </section>
-    `
-    }
-
-}
+        
+    `;
+  }
+};
